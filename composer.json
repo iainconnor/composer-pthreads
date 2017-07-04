@@ -3,7 +3,18 @@
     "description": "PThreads with the Composer autoloader baked in.",
     "type": "library",
     "require": {
-        "ext-pthreads": "^3.1"
+      "ext-pthreads": "^3.1",
+      "phpunit/phpunit": "^6.2"
+    },
+  "autoload": {
+    "psr-4": {
+      "IainConnor\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "IainConnor\\": "tests/"
+    }
     },
     "authors": [
         {
