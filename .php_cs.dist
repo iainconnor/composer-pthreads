@@ -1,0 +1,96 @@
+<?php
+
+return PhpCsFixer\Config::create()
+                        ->setRules([// Start from a good foundation.
+                                    '@PSR2' => true,
+                                    // Short array syntax [].
+                                    'array_syntax' => ['syntax' => 'short'],
+                                    // Spaces around binary operators and the properties they operate on.
+                                    'binary_operator_spaces' => true,
+                                    // Blank line after opening PHP tag.
+                                    'blank_line_after_opening_tag' => true,
+                                    // Blank line before return statement.
+                                    'blank_line_before_return' => true,
+                                    // Space between cast and variable being cast.
+                                    'cast_spaces' => true,
+                                    // Space between concat operator and properties being concatenated.
+                                    'concat_space' => ['spacing' => 'one'],
+                                    // Space between equals assignment and properties being assigned.
+                                    'declare_equal_normalize' => ['space' => 'single'],
+                                    // Space after typehint in method declaration.
+                                    'function_typehint_space' => true,
+                                    // Convert hash comments to slash comments.
+                                    'hash_to_slash_comment' => true,
+                                    // Space after include keyword and file path to include.
+                                    'include' => true,
+                                    // Casts should be lowercase.
+                                    'lowercase_cast' => true,
+                                    // Should be a blank line between methods.
+                                    'method_separation' => true,
+                                    // Should call internal PHP methods by their correct names.
+                                    'native_function_casing' => true,
+                                    // Should be no blank lines after class opening and code.
+                                    'no_blank_lines_after_class_opening' => true,
+                                    // Should be no blank lines between PHPDoc and declaration.
+                                    'no_blank_lines_after_phpdoc' => true,
+                                    // No useless lines with just a semi colon on them.
+                                    'no_empty_statement' => true,
+                                    // Namespace declaration shouldn't be indented.
+                                    'no_leading_namespace_whitespace' => true,
+                                    // Don't allow new lines before end of line semicolon.
+                                    'no_singleline_whitespace_before_semicolons' => true,
+                                    // Don't allow extra spaces around braces to mess with indentation.
+                                    'no_spaces_around_offset' => true,
+                                    // Don't allow trailing commas in method calls.
+                                    'no_trailing_comma_in_list_call' => true,
+                                    // Don't allow trailing commas in array definitions.
+                                    'no_trailing_comma_in_singleline_array' => true,
+                                    // Remove unused import statements.
+                                    'no_unused_imports' => true,
+                                    // Make sure commas in arrays don't have space before them.
+                                    'no_whitespace_before_comma_in_array' => true,
+                                    // Make sure blank lines are truly blank.
+                                    'no_whitespace_in_blank_line' => true,
+                                    // Arrays should always be references with square braces.
+                                    'normalize_index_brace' => true,
+                                    // Beautify PHPDoc statements.
+                                    'phpdoc_align' => true,
+                                    'phpdoc_indent' => true,
+                                    'phpdoc_inline_tag' => true,
+                                    'phpdoc_order' => true,
+                                    'phpdoc_no_useless_inheritdoc' => true,
+                                    'phpdoc_scalar' => true,
+                                    'phpdoc_separation' => true,
+                                    'phpdoc_single_line_var_spacing' => true,
+                                    'phpdoc_trim' => true,
+                                    'phpdoc_types' => true,
+                                    'phpdoc_add_missing_param_annotation' => true,
+                                    // Convert PHPDocs to normal comments in situations where they aren't actually on structures.
+                                    'phpdoc_to_comment' => true,
+                                    // Cast (boolean) and (integer) should be written as (bool) and (int), (double) and (real) as (float).
+                                    'short_scalar_cast' => true,
+                                    // One and only one blank line before namespace.
+                                    'single_blank_line_before_namespace' => true,
+                                    // No space after end of line statement.
+                                    'space_after_semicolon' => true,
+                                    // Disallow <> and use != instead.
+                                    'standardize_not_equals' => true,
+                                    // Standardize spaces around ternary ?: operator.
+                                    'ternary_operator_spaces' => true,
+                                    // Make it so that all multiline arrays have trailing commas.
+                                    'trailing_comma_in_multiline_array' => true,
+                                    // Array declarations should not have inner spaces.
+                                    'trim_array_spaces' => true,
+                                    // Remove spaces before unary +=, ++, --, etc operators.
+                                    'unary_operator_spaces' => true,
+                                    // Arrays must be spaced properly.
+                                    'whitespace_after_comma_in_array' => true,
+                                    // No useless else statements.
+                                    'no_useless_else' => true,
+                                    // Order components of class declaration.
+                                    'ordered_class_elements' => true,
+                                    // Make imports render nicely.
+                                    'ordered_imports' => true,
+                                   ])->setFinder(PhpCsFixer\Finder::create()
+                                                                  ->exclude('vendor')
+                                                                  ->in(__DIR__));

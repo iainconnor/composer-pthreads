@@ -1,0 +1,36 @@
+# http://editorconfig.org
+
+# Allow sub-configs in different folders.
+root = true
+
+[*]
+# Allow UTF8 characters.
+charset = utf-8
+# Unix-style newlines.
+end_of_line = lf
+# Insert a blank line at end of file.
+insert_final_newline = true
+# Spaces instead of tabs.
+indent_style = space
+# 4 spaces.
+indent_size = 4
+# Trim whitespace at the end of lines.
+trim_trailing_whitespace = true
+
+[*.{md,yml}]
+# Maintain whitespace for these file types.
+trim_trailing_whitespace = false
+insert_final_newline = none
+
+[*.{yml,json,xml,xslt,xsd,svg,xsl,css,sass,less,scss,sql}]
+# Shorter indentation style for these file types.
+indent_size = 2
+
+[/vendor/**]
+# Ignore vendor.
+charset = none
+end_of_line = none
+insert_final_newline = none
+trim_trailing_whitespace = none
+indent_style = none
+indent_size = none
