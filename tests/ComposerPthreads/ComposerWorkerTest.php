@@ -28,7 +28,9 @@ class ComposerWorkerTest extends TestCase
         while ($pool->collect(function (TestTask $task) {
 
             return $task->isDone();
-        })) continue;
+        })) {
+            continue;
+        }
 
         $pool->shutdown();
 
@@ -40,6 +42,7 @@ class ComposerWorkerTest extends TestCase
         // Sort alphabetically because async things might not execute in same order always.
         sort($poolOutput);
 
-        $this->assertEquals("Hello 0\nHello 1\nHello 2\nHello 3\nHello 4\nHello 5\nHello 6\nHello 7\nHello 8\nHello 9", join("\n", $poolOutput));
+        $this->assertEquals("Hello 0\nHello 1\nHello 2\nHello 3\nHello 4\nHello 5\nHello 6\nHello 7\nHello 8\nHello 9",
+                            join("\n", $poolOutput));
     }
 }

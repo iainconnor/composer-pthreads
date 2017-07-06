@@ -1,11 +1,9 @@
 <?php
 
-
 namespace IainConnor\ComposerPthreads;
 
 /**
  * Class ResponseDataBundle
- *
  * This Class is a wrapper to be used in capturing the output of a Worker in a thread-safe way.
  *
  * @package IainConnor\ComposerPthreads

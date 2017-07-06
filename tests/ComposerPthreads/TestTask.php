@@ -1,22 +1,20 @@
 <?php
 
-
 namespace IainConnor\ComposerPthreads;
 
 class TestTask extends \Thread
 {
     /** @var string */
     protected $message;
-
     /** @var ResponseDataBundle */
     protected $responseDataBundle;
-
     /** @var bool */
     protected $done = false;
 
     /**
      * TestTask constructor.
-     * @param string $message
+     *
+     * @param string             $message
      * @param ResponseDataBundle $responseDataBundle
      */
     public function __construct(string $message, ResponseDataBundle $responseDataBundle)

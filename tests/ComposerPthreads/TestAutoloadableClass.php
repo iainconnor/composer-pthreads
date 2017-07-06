@@ -1,6 +1,5 @@
 <?php
 
-
 namespace IainConnor\ComposerPthreads;
 
 class TestAutoloadableClass
@@ -10,6 +9,7 @@ class TestAutoloadableClass
 
     /**
      * Autoloadable constructor.
+     *
      * @param string $message
      */
     public function __construct(string $message)

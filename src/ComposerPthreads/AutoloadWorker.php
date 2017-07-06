@@ -4,7 +4,6 @@ namespace IainConnor\ComposerPthreads;
 
 /**
  * Class AutoloadWorker
- *
  * A Worker that autoloads Classes from the given Composer autoloader file.
  *
  * @package IainConnor\ComposerPthreads
@@ -33,8 +32,7 @@ class AutoloadWorker extends \Worker
     public function start(
         /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */
         int $options = null
-    )
-    {
+    ) {
         return parent::start(PTHREADS_INHERIT_NONE);
     }
 }
